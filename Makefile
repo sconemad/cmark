@@ -39,7 +39,9 @@ $(BUILDDIR):
 		-DCMAKE_INSTALL_PREFIX=$(INSTALL_PREFIX)
 
 install: $(BUILDDIR)
-	make -C $(BUILDDIR) install
+	make -C $(BUILDDIR)
+
+check: test
 
 debug:
 	mkdir -p $(BUILDDIR); \
